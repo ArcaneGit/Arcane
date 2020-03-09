@@ -1,218 +1,198 @@
-{
-  "settings": {
-    "name": "My Site",
-    "currentPage": "index.html",
-    "theme": {
-      "name": "mobirise4",
-      "title": "Mobirise 4",
-      "styling": {
-        "primaryColor": "#149dcc",
-        "secondaryColor": "#ff3366",
-        "successColor": "#F7ED4A",
-        "infoColor": "#82786E",
-        "warningColor": "#879A9F",
-        "dangerColor": "#B1A374",
-        "mainFont": "Rubik",
-        "display1Font": "Roboto",
-        "display1Size": 4.25,
-        "display2Font": "Rubik",
-        "display2Size": 3,
-        "display5Font": "Rubik",
-        "display5Size": 1.5,
-        "display7Font": "Rubik",
-        "display7Size": 1,
-        "display4Font": "Rubik",
-        "display4Size": 1,
-        "isRoundedButtons": true,
-        "isAnimatedOnScroll": true,
-        "isScrollToTopButton": false
-      },
-      "additionalSetColors": [
-        "#d455d1",
-        "#02b3ff",
-        "#ff0000"
-      ]
-    },
-    "path": "@PROJECT_PATH@",
-    "siteFonts": [
-      {
-        "css": "'Rubik', sans-serif",
-        "name": "Rubik",
-        "url": "https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
-      },
-      {
-        "css": "'Roboto', sans-serif",
-        "name": "Roboto",
-        "url": "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-      }
-    ],
-    "versionFirst": "4.7.6",
-    "uniqCompNum": 13,
-    "versionPublish": "4.12.2"
-  },
-  "pages": {
-    "index.html": {
-      "settings": {
-        "main": true,
-        "title": "Home",
-        "meta_descr": "",
-        "header_custom": "",
-        "footer_custom": "",
-        "html_before": ""
-      },
-      "components": [
-        {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background": "linear-gradient(45deg, @bg-value, @color2)"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-text, .mbr-section-btn": {
-              "text-align": "center"
-            }
-          },
-          "_name": "header5",
-          "_customHTML": "<section class=\"header5\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/e51821e4-73e3-4b2b-9bd7-8c3597b9afac1-upscaled-image-x4.png\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#d455d1\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"color\" name=\"color2\" title=\"Color2\" value=\"#02b3ff\" condition=\"bg.type=='color'\" selected>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"><b>\n                    Arcane Cheats</b></h1>\n                <p class=\"mbr-text align-center display-5 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>\n                   Arcane Cheats</b> provides hacks for a small amount of games to ensure the hacks we create are high quality and superior to others. Our cheats are all slotted to ensure safety and to minimize the chance of a detection. Every cheat will have a unique bypass to reduce the risk of a detection leaking into other games. We consists of a small team of dedicated coders who specialize in certain trades from reverse engineering, programming, and creating an easy to use interface.\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">LIVE DEMO</a></div>\n            </div>\n        </div>\n    </div>\n\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
-          "_cid": "rSH6dtA5be",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "header5-4"
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".card-box": {
-              "background-color": "@cardsBg",
-              "padding": "2rem"
-            },
-            "h4": {
-              "font-weight": "500",
-              "margin-bottom": "0",
-              "text-align": "left"
-            },
-            "p": {
-              "color": "#767676",
-              "text-align": "left"
-            },
-            ".card-wrapper": {
-              "position": "relative",
-              "box-shadow": "0px 0px 0px 0px rgba(0, 0, 0, 0)",
-              "transition": "box-shadow 0.3s",
-              "&:hover": {
-                "box-shadow": "0px 0px 30px 0px rgba(0, 0, 0, 0.05)",
-                "transition": "box-shadow 0.3s"
-              }
-            },
-            ".card-img": {
-              "position": "absolute",
-              "top": "0",
-              "left": "0",
-              "width": "100%",
-              "overflow": "hidden"
-            },
-            ".card-title": {
-              "color": "#232323"
-            }
-          },
-          "_name": "features4",
-          "_customHTML": "<section class=\"features4\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"9\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"9\">\n        \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"color\" title=\"Cards Bg\" name=\"cardsBg\" value=\"#ffffff\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cebfaf\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>     \n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"media-container-row\" mbr-cards=\"bootstrap\">\n            <div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper media-container-row media-container-row\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            Raibow Six Siege (Undetected)</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Our internal R6 cheat has not been detected since launch. We offer many features such as silent aim, cav esp, glow, no recoil, and a custom Battle Eye Bypass. These features have been specifically implemented into this cheat to ensure that the user can play forever and never recieve a ban.</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper media-container-row\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            Escape From Tarkov (Detected)</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Our external EFT cheat has many features that allow you to have an advatage over everyone else. Our cheat has aimbot, box esp, bone es, chams, no recoil, no spead, snaplines, and much more. (Detected)</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper media-container-row\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            HWID Spoofer</h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">Our HWID Spoofer is top the line and will guarantee that you stay safe while hacking. It's runs in Ring 0 which makes it safe, secure, and effective. It spoofs a plethora of Serials and identifiers such as Volume Identifier Serials,&nbsp;Psychical Disk SerialNumber/PartNumber Serials,&nbsp;USB Identifier Serials,&nbsp;Bios Identifier Serials,&nbsp;GPU Identifier Serials,&nbsp;CPU Identifier Serials,&nbsp;Mother Board Identifier Serials, MAC Addresses,&nbsp;Network Adapter GUID,&nbsp;WMIC Manipulation,&nbsp;Registry Cleaning,&nbsp;System Cleaning,&nbsp;Ram Cache Cleaning, and&nbsp;Ram SerialNumber/PartNumber. That sounds like a lot but the list goes on.</p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper media-container-row\">\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            Unlimited Sites\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                            Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "rSHdJea4tK",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "features4-a"
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".list-group-item": {
-              "padding": ".75rem 3.25rem"
-            },
-            ".plan": {
-              "word-break": "break-word",
-              "position": "relative",
-              "max-width": "300px",
-              "padding-right": "0",
-              "padding-left": "0",
-              "color": "#767676",
-              ".list-group-item": {
-                "position": "relative",
-                "-webkit-justify-content": "center",
-                "justify-content": "center",
-                "background-color": "transparent",
-                "border": "0",
-                "&::after": {
-                  "position": "absolute",
-                  "bottom": "0",
-                  "left": "20%",
-                  "width": "60%",
-                  "height": "2px",
-                  "content": "\"\"",
-                  "background-color": "#eaeaea"
-                },
-                "&:last-child::after": {
-                  "display": "none"
-                }
-              },
-              "&.favorite": {
-                "background-color": "#fff",
-                "box-shadow": "0 0 60px 0 rgba(0, 0, 0, 0.07)"
-              }
-            },
-            ".plan-header": {
-              "padding-left": "1rem",
-              "padding-right": "1rem"
-            },
-            ".price-figure": {
-              "font-weight": "700",
-              "color": "#232323"
-            },
-            ".price-value": {
-              "font-weight": "700",
-              "vertical-align": "top"
-            },
-            "@media (max-width: 550px)": {
-              ".price-figure": {
-                "font-size": "4.25rem"
-              }
-            }
-          },
-          "_name": "pricing-tables2",
-          "_customHTML": "<section group=\"Pricing Tables\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" class=\"pricing-table2\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input inline type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n        <input inline type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"8\">\n\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <select title=\"Items Count\" name=\"itemsCount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n        <select title=\"Favorite Item\" name=\"favoriteItem\">\n            <option value=\"0\">none</option>\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#efefef\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" checked name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n\n            <div class=\"plan col-12 mx-2 my-2 justify-content-center\" mbr-if=\"itemsCount > 0\" mbr-class=\"{\n                 'favorite': favoriteItem == 1,\n                 'col-lg-4': itemsCount == 3,\n                 'col-lg-6': itemsCount == 2,\n                 'col-lg-3': itemsCount == 4}\">\n                <div class=\"plan-header text-center pt-5\">\n                    <h3 class=\"plan-title mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">Week</h3>\n                    <div class=\"plan-price\">\n                        <span mbr-text class=\"price-value mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".price-value\">\n                            $\n                        </span>\n                        <span mbr-text class=\"price-figure mbr-fonts-style\" mbr-theme-style=\"display-1\">\n                            50</span>\n                        <small mbr-text class=\"price-term mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".price-term\">&nbsp;</small>\n                    </div>\n                </div>\n                <div class=\"plan-body\">\n                    <div class=\"plan-list align-center\">\n                        <ul mbr-text class=\"list-group list-group-flush mbr-fonts-style\" mbr-theme-style=\"display-7\"><br><br></ul>\n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center py-4 pb-5\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://discord.gg/DfRVb3U\" class=\"btn btn-secondary-outline\" data-app-placeholder=\"Type Text\" target=\"_blank\">BUY NOW</a></div>\n                </div>\n            </div>\n\n            <div class=\"plan col-12 mx-2 my-2 justify-content-center\" mbr-if=\"itemsCount > 1\" mbr-class=\"{\n                 'favorite': favoriteItem == 2,\n                 'col-lg-4': itemsCount == 3,\n                 'col-lg-6': itemsCount == 2,\n                 'col-lg-3': itemsCount == 4}\">\n                <div class=\"plan-header text-center pt-5\">\n                    <h3 class=\"plan-title mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">Month</h3>\n                    <div class=\"plan-price\">\n                        <span mbr-text class=\"price-value mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".price-value\">\n                            $\n                        </span>\n                        <span mbr-text class=\"price-figure mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".price-figure\">100</span>\n                        <small mbr-text class=\"price-term mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".price-term\">&nbsp;</small>\n                    </div>\n                </div>\n                <div class=\"plan-body\">\n                    <div class=\"plan-list align-center\">\n                        <ul mbr-text class=\"list-group list-group-flush mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <li class=\"list-group-item\"><b>MOST PURCHASED</b></li>\n                        </ul>\n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center py-4 pb-5\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://discord.gg/DfRVb3U\" class=\"btn btn-secondary-outline\" data-app-placeholder=\"Type Text\">BUY NOW</a></div>\n                </div>\n            </div>\n\n            <div class=\"plan col-12 mx-2 my-2 justify-content-center\" mbr-if=\"itemsCount > 2\" mbr-class=\"{\n                 'favorite': favoriteItem == 3,\n                 'col-lg-4': itemsCount == 3,\n                 'col-lg-6': itemsCount == 2,\n                 'col-lg-3': itemsCount == 4}\">\n                <div class=\"plan-header text-center pt-5\">\n                    <h3 class=\"plan-title mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">Year</h3>\n                    <div class=\"plan-price\">\n                        <span mbr-text class=\"price-value mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".price-value\">\n                            $\n                        </span>\n                        <span mbr-text class=\"price-figure mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".price-figure\">250</span>\n                        <small mbr-text class=\"price-term mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".price-term\">&nbsp;</small>\n                    </div>\n                </div>\n                <div class=\"plan-body\">\n                    <div class=\"plan-list align-center\">\n                        <ul mbr-text class=\"list-group list-group-flush mbr-fonts-style\" mbr-theme-style=\"display-7\"><br><br></ul>\n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center py-4 pb-5\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://discord.gg/DfRVb3U\" class=\"btn btn-secondary-outline\" data-app-placeholder=\"Type Text\" target=\"_blank\">BUY NOW</a></div>\n                </div>\n            </div>\n\n            <div class=\"plan col-12 mx-2 my-2 justify-content-center\" mbr-if=\"itemsCount > 3\" mbr-class=\"{\n                 'favorite': favoriteItem == 4,\n                 'col-lg-4': itemsCount == 3,\n                 'col-lg-6': itemsCount == 2,\n                 'col-lg-3': itemsCount == 4}\">\n                <div class=\"plan-header text-center pt-5\">\n                    <h3 class=\"plan-title mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".plan-title\">Lifetime</h3>\n                    <div class=\"plan-price\">\n                        <span mbr-text class=\"price-value mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".price-value\">\n                            $\n                        </span>\n                        <span mbr-text class=\"price-figure mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".price-figure\">\n                            500</span>\n                        <small mbr-text class=\"price-term mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".price-term\">&nbsp;</small>\n                    </div>\n                </div>\n                <div class=\"plan-body\">\n                    <div class=\"plan-list align-center\">\n                        <ul mbr-text class=\"list-group list-group-flush mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                            <li class=\"list-group-item\"><b>\n                                BEST VALUE</b></li>\n                        </ul>\n                    </div>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn text-center py-4 pb-5\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://discord.gg/DfRVb3U\" class=\"btn btn-secondary-outline\" data-app-placeholder=\"Type Text\" target=\"_blank\">BUY NOW</a></div>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</section>",
-          "_cid": "rSHuvhJioX",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {},
-          "_anchor": "pricing-tables2-c"
-        }
-      ]
-    }
-  }
-}
+<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.12.2, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="https://r.mobirisesite.com/56129/assets/images/logo4.png?v=1Jbogz" type="image/x-icon">
+  <meta name="description" content="">
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="https://r.mobirisesite.com/56129/assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/56129/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/56129/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/56129/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/56129/assets/tether/tether.min.css">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/56129/assets/animatecss/animate.min.css">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/56129/assets/theme/css/style.css">
+  <link rel="preload" as="style" href="https://r.mobirisesite.com/56129/assets/mobirise/css/mbr-additional.css?v=1Jbogz"><link rel="stylesheet" href="https://r.mobirisesite.com/56129/assets/mobirise/css/mbr-additional.css?v=1Jbogz" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section class="header5 cid-rSH6dtA5be mbr-fullscreen mbr-parallax-background" id="header5-4">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(35, 35, 35);">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="mbr-white col-md-10">
+                <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-1"><strong>
+                    Arcane Cheats</strong></h1>
+                <p class="mbr-text align-center display-5 pb-3 mbr-fonts-style"><strong>
+                   Arcane Cheats</strong> provides hacks for a small amount of games to ensure the hacks we create are high quality and superior to others. Our cheats are all slotted to ensure safety and to minimize the chance of a detection. Every cheat will have a unique bypass to reduce the risk of a detection leaking into other games. We consists of a small team of dedicated coders who specialize in certain trades from reverse engineering, programming, and creating an easy to use interface.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    
+</section>
+
+<section class="engine"><a href="https://mobirise.info/w">html5 templates</a></section><section class="features4 cid-rSHdJea4tK" id="features4-a">
+    
+         
+
+    
+    <div class="container">
+        <div class="media-container-row">
+            <div class="card p-3 col-12 col-md-6 col-lg-4">
+                <div class="card-wrapper media-container-row media-container-row">
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-5">
+                            Raibow Six Siege (Undetected)</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">Our internal R6 cheat has not been detected since launch. We offer many features such as silent aim, cav esp, glow, no recoil, and a custom Battle Eye Bypass. These features have been specifically implemented into this cheat to ensure that the user can play forever and never recieve a ban.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-12 col-md-6 col-lg-4">
+                <div class="card-wrapper media-container-row">
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-5">
+                            Escape From Tarkov (Detected)</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">Our external EFT cheat has many features that allow you to have an advatage over everyone else. Our cheat has aimbot, box esp, bone es, chams, no recoil, no spead, snaplines, and much more. (Detected)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-4">
+                <div class="card-wrapper media-container-row">
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-5">
+                            HWID Spoofer</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">Our HWID Spoofer is top the line and will guarantee that you stay safe while hacking. It's runs in Ring 0 which makes it safe, secure, and effective. It spoofs a plethora of Serials and identifiers such as Volume Identifier Serials,&nbsp;Psychical Disk SerialNumber/PartNumber Serials,&nbsp;USB Identifier Serials,&nbsp;Bios Identifier Serials,&nbsp;GPU Identifier Serials,&nbsp;CPU Identifier Serials,&nbsp;Mother Board Identifier Serials, MAC Addresses,&nbsp;Network Adapter GUID, &nbsp;and also has Registry Cleaning,&nbsp;System Cleaning, Ram Cache Cleaning, and more!&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+
+<section class="pricing-table2 cid-rSHuvhJioX" id="pricing-tables2-c">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+
+            <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">Week</h3>
+                    <div class="plan-price">
+                        <span class="price-value mbr-fonts-style display-5">
+                            $
+                        </span>
+                        <span class="price-figure mbr-fonts-style display-1">
+                            50</span>
+                        <small class="price-term mbr-fonts-style display-7">&nbsp;</small>
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7"><br><br></ul>
+                    </div>
+                    <div class="mbr-section-btn text-center py-4 pb-5"><a href="https://discord.gg/DfRVb3U" class="btn btn-secondary-outline display-4" target="_blank">BUY NOW</a></div>
+                </div>
+            </div>
+
+            <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">Month</h3>
+                    <div class="plan-price">
+                        <span class="price-value mbr-fonts-style display-5">
+                            $
+                        </span>
+                        <span class="price-figure mbr-fonts-style display-1">100</span>
+                        <small class="price-term mbr-fonts-style display-7">&nbsp;</small>
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                            <li class="list-group-item"><strong>MOST PURCHASED</strong></li>
+                        </ul>
+                    </div>
+                    <div class="mbr-section-btn text-center py-4 pb-5"><a href="https://discord.gg/DfRVb3U" class="btn btn-secondary-outline display-4">BUY NOW</a></div>
+                </div>
+            </div>
+
+            <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">Year</h3>
+                    <div class="plan-price">
+                        <span class="price-value mbr-fonts-style display-5">
+                            $
+                        </span>
+                        <span class="price-figure mbr-fonts-style display-1">250</span>
+                        <small class="price-term mbr-fonts-style display-7">&nbsp;</small>
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7"><br><br></ul>
+                    </div>
+                    <div class="mbr-section-btn text-center py-4 pb-5"><a href="https://discord.gg/DfRVb3U" class="btn btn-secondary-outline display-4" target="_blank">BUY NOW</a></div>
+                </div>
+            </div>
+
+            <div class="plan col-12 mx-2 my-2 justify-content-center favorite col-lg-3">
+                <div class="plan-header text-center pt-5">
+                    <h3 class="plan-title mbr-fonts-style display-5">Lifetime</h3>
+                    <div class="plan-price">
+                        <span class="price-value mbr-fonts-style display-5">
+                            $
+                        </span>
+                        <span class="price-figure mbr-fonts-style display-1">
+                            500</span>
+                        <small class="price-term mbr-fonts-style display-7">&nbsp;</small>
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-list align-center">
+                        <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                            <li class="list-group-item"><strong>
+                                BEST VALUE</strong></li>
+                        </ul>
+                    </div>
+                    <div class="mbr-section-btn text-center py-4 pb-5"><a href="https://discord.gg/DfRVb3U" class="btn btn-secondary-outline display-4" target="_blank">BUY NOW</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+  <script src="https://r.mobirisesite.com/56129/assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="https://r.mobirisesite.com/56129/assets/popper/popper.min.js"></script>
+  <script src="https://r.mobirisesite.com/56129/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://r.mobirisesite.com/56129/assets/tether/tether.min.js"></script>
+  <script src="https://r.mobirisesite.com/56129/assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="https://r.mobirisesite.com/56129/assets/parallax/jarallax.min.js"></script>
+  <script src="https://r.mobirisesite.com/56129/assets/viewportchecker/jquery.viewportchecker.js"></script>
+  <script src="https://r.mobirisesite.com/56129/assets/theme/js/script.js"></script>
+  
+  
+  <input name="animation" type="hidden">
+  </body>
+</html>
